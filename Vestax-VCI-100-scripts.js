@@ -244,11 +244,8 @@ VestaxVCI100.syncButton = function (channel, control, value, status, group) {
         return;
     }
 
-    if (this.shiftMode) {
-        engine.setValue(group, "sync_key", 1);
-    } else {
-        engine.setValue(group, "beatsync", 1);
-    }
+    engine.setValue(group, "sync_key", 1);
+    engine.setValue(group, "beatsync", 1);
 }
 
 VestaxVCI100.loopLength = function (channel, control, value, status, group) {
